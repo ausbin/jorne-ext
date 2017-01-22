@@ -10,10 +10,13 @@
         "96": "icons/jorne-96.png"
     },
 
-    "content_scripts": [
-        {
-            "matches": ["*://*.wikipedia.org/*"],
-            "js": ["jorne.js"]
-        }
-    ]
+    "permissions": [
+        "activeTab"
+    ],
+
+    "browser_action": {
+        "default_icon": "icons/jorne-96.png",
+        "default_title": "Add Article to Jorne",
+        "default_popup": "popup/add_article.html"
+    }
 }
