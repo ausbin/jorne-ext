@@ -1,3 +1,25 @@
-head, body {
-    width: 128px;
+html, body {
+    width: 512px;
+}
+
+body {
+    /* Don't use the ugly tan default background color */
+    background-color: white;
+    /* Needed to hide annoying horizontal scrollbar on Firefox and GNU/Linux */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#paragraphs {
+    padding: 4px 16px 4px 4px;
+}
+
+#paragraphs li {
+    display: block;
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+#paragraphs li:last-child {
+    margin-bottom: 0;
 }
