@@ -6,8 +6,12 @@ function findParagraphs() {
     let result = [];
 
     // WARNING: HIGHLY ADVANCED ALGORITHM
-    for (let p of document.getElementsByTagName("p"))
-        result.push(p.textContent);
+    for (let p of document.getElementsByTagName("p")) {
+        let text = p.textContent.trim();
+
+        if (text != "")
+            result.push(p.textContent);
+    }
 
     return result;
 }
