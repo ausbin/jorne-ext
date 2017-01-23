@@ -39,9 +39,12 @@ body {
 }
 
 #paragraphs {
-    margin: 48px 0 0 0;
+    /* I'm not sure what these two are, but Firefox sets them for <ol>s, so
+       unset them */
+    margin-block-end: 0;
+    margin-block-start: 0;
     overflow-y: auto;
-    padding: 4px 16px 4px 4px;
+    padding: 52px 16px 4px 4px;
 }
 
 #paragraphs li {
