@@ -2,7 +2,7 @@ var title = document.getElementById("title");
 var paragraphs = document.getElementById("paragraphs");
 
 // Clear out stale values
-title.innerHTML = "";
+title.value = "";
 paragraphs.innerHTML = "";
 
 browser.tabs.query({active: true, currentWindow: true}).then(tabs => {
@@ -16,7 +16,7 @@ browser.tabs.query({active: true, currentWindow: true}).then(tabs => {
     });
 
     browser.tabs.sendMessage(activeTabId, {}).then(resp => {
-        title.textContent = resp.title;
+        title.value = resp.title;
 
         for (let paragraph of resp.paragraphs) {
             let p = document.createElement("li");
